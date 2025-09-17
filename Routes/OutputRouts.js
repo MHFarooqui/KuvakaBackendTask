@@ -1,5 +1,5 @@
 const express = require("express");
-const outputController = require("../Controller/OutputController");
+const outputController = require("../Controller/ScoringPipeline");
 
 const router = express.Router(); 
 // Output APIs

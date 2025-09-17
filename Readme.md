@@ -10,10 +10,10 @@ The system allows uploading offer and lead data, scoring them, and exporting res
 ```
 ├── controllers
 │   ├── InputController.js    # Manages input data (offer + leads)
-│   ├── ScoreController.js    # AI intent classification using Gemini
+│   ├── AiClient.js    # AI intent classification using Gemini
 │   └── ScorePipeline.js      # Combines rule-based + AI scoring
-├── routes.js                 # API routes
-├── server.js                 # Express server entry point
+├── Routes                # API routes
+├── index.js                 # Express server entry point
 └── README.md                 # Project documentation
 ```
 
@@ -58,18 +58,23 @@ Default server runs on:
 
 ## 📡 API Endpoints
 
-### ➕ Upload Data
+### ➕ Accepts json with offer details Data
 
-**POST** `/upload`  
-Upload `offer.json` and `leads.json`.
+**POST** `/offer`  
+Upload `offer.json`
 
-**Response:**
-```json
-{
-  "message": "Data uploaded successfully"
-}
-```
-![Upload Success](Assets/upload-success.png)
+
+![Upload Success](Assets/UploadCsv.png)
+
+---
+
+### ➕ Uploads csv file
+
+**POST** `/leads/upload`  
+Upload `offer.json`
+
+
+![Upload Success](Assets/UploadCsv.png)
 
 ---
 
@@ -94,7 +99,7 @@ Processes leads using rules + AI intent.
   ]
 }
 ```
-![Scoring Endpoint](Assets/scoring-endpoint.png)
+![Scoring Endpoint](Assets/score.png)
 
 ---
 
@@ -103,16 +108,16 @@ Processes leads using rules + AI intent.
 **GET** `/results`  
 Returns previously calculated scoring results in JSON.
 
-![Results Endpoint](Assets/results-endpoint.png)
+![Results Endpoint](Assets/Results.png)
 
 ---
 
 ### 📥 Download CSV
 
-**GET** `/download-csv`  
+**GET** `/results/export`  
 Downloads the scoring results as a CSV file.
 
-![CSV Download](Assets/csv-download.png)
+![CSV Download](Assets/ResultExport.png)
 
 ---
 
