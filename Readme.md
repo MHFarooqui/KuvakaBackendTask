@@ -71,7 +71,7 @@ Upload `offer.json`
 ### ➕ Uploads csv file
 
 **POST** `/leads/upload`  
-Upload `offer.json`
+Upload `leads.csv`
 
 
 ![Upload Success](Assets/UploadCsv.png)
