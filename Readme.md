@@ -53,7 +53,7 @@ npm run serve
 
 Default server runs on:  
 local: [http://localhost:3000](http://localhost:3000)
-Rendrer : [https://kuvakabackendtask.onrender.com](https://kuvakabackendtask.onrender.com)
+Render : [https://kuvakabackendtask.onrender.com](https://kuvakabackendtask.onrender.com)
 
 ---
 
